@@ -67,19 +67,30 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 	<![endif]-->
 </head>
 
-<body class="site <?php echo $option
-	. ' view-' . $view
-	. ($layout ? ' layout-' . $layout : ' no-layout')
-	. ($task ? ' task-' . $task : ' no-task')
-	. ($itemid ? ' itemid-' . $itemid : '')
-	. ($params->get('fluidContainer') ? ' fluid' : '');
-	echo ($this->direction == 'rtl' ? ' rtl' : '');
-?>">
-<div class="topbar">
-	<jdoc:include type="modules" name="topbar" style="none" />
+<body class="site">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 advbar">
+			<jdoc:include type="modules" name="advbar" style="none" />
+		</div>
+	</div>
 </div>
-	<jdoc:include type="modules" name="menu" style="Navigator" />
-	
+<header class="container">
+	<div class="row">
+		<div class="hidden-xs hidden-sm col-md-12">
+			<a href="#" class="logo"></a>
+		</div>
+	</div>
+</header>
+<jdoc:include type="modules" name="menu" style="Navigator" />
+	<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<jdoc:include type="message" />
+						<jdoc:include type="component" />
+					</div>
+				</div>
+	</div>
 </body>
 	<jdoc:include type="modules" name="debug" style="none" />
 	<jdoc:include type="modules" name="hidden" style="none" />

@@ -55,3 +55,8 @@ function modChrome_well($module, &$params, &$attribs)
 		echo '</' . $moduleTag . '>';
 	}
 }
+function modChrome_Navigator($module, &$params, &$attribs){
+	?>
+	
+	<?php
+}
