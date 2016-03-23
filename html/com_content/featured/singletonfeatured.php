@@ -33,23 +33,42 @@ JHtml::_('behavior.caption');
 	</div>
 <?php endif; ?>
 <?php if (!empty($this->intro_items)) : ?>
+	<?php
+	switch($this->params['num_columns']){
+		case 0:
+		default:
+			$col="";
+			break;
+		case 2:
+			$col="col-sm-6";
+			break;
+		case 3:
+			$col="col-sm-4";
+			break;
+		case 4:
+			$col="col-sm-2 col-md-6";
+			break;
+		case 6:
+			$col="col-sm-6 col-md-4 col-lg-2";
+			break;
+	}?>
 	<?php foreach ($this->intro_items as $key => &$item) : ?>
 		<?php if($key%$this->params['num_columns']==0):?>
 			<?php $open=true;?>
-			<div class="row"><?php echo $key;?>
+			<div class="row spantop45 pairheight">
 		<?php endif;?>
 		<?php
 				$this->item = &$item;
 				$this->key= &$key;
+				$this->col=&$col;
 				echo $this->loadTemplate('introitem');
 		?>
-		<?php if((($key+1)%$this->params['num_columns']==0)&&($open)):?>
-<?php $open=false;?>
-GAS
-			</div>
-		<?php endif;?>
+		<?php if((($key+1)%$this->params['num_columns']==0)&&($open)):
+			$open=false;
+			echo '</div>';
+		endif;?>
 	<?php endforeach; ?>
-	<? echo ($open) ? "</div>" : "";unset($open);?>
+	<? echo (!$open) ? "</div>" : "";unset($open);?>
 <?php endif; ?>
 
 <?php if (!empty($this->link_items)) : ?>

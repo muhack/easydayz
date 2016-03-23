@@ -95,4 +95,22 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 </body>
 	<jdoc:include type="modules" name="debug" style="none" />
 	<jdoc:include type="modules" name="hidden" style="none" />
+	<footer class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<jdoc:include type="modules" name="footer-1"/>
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<jdoc:include type="modules" name="footer-2"/>
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<jdoc:include type="modules" name="footer-3"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 credits">
+					<jdoc:include type="modules" name="credits"/>
+			</div>
+		</div>
+	</footer>
 </html>

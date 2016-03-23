@@ -4,7 +4,26 @@ $shadow-box: 10px 10px 15px;
 $color-primary-1:#de4500;
 $color-primary-2:#334388;
 $color-secondary-1:white;
+/*-------------------------------*/
+.shadow{
+  &-title{
+    text-align: center;
+    color:white;
+    text-shadow: $shadow-text-title black;
+  }
+}
+/*-------------------------------*/
+a{
+  &,&:visited,&:hover,&:focus{
+    text-decoration: none;
+  }
+}
+/*-------------------------------*/
+.navigator{
+  &{
 
+  }
+}
 /*-------------------------------*/
 .featured-singleton{
   &{
@@ -41,6 +60,38 @@ $color-secondary-1:white;
   }
 }
 /*-------------------------------*/
+.introitem{
+  &{
+
+  }
+  & .cover{
+    background-size:cover;
+    min-height: 40vh;
+  }
+  & .cta{
+
+  }
+  & .heading{
+    color:black;
+  }
+  & .text{
+
+  }
+}
+/*-------------------------------*/
+footer{
+  &{
+
+  }
+  & .credits{
+    &,& > *{
+      text-align: center;
+    }
+  }
+}
+/*-------------------------------*/
+/*-------------------------------*/
+/*-------------------------------*/
 .cta{
   &{
     text-align: center;
@@ -64,5 +115,33 @@ $color-secondary-1:white;
     color: $color-secondary-1;
     border-color:$color-secondary-1;
     box-shadow: $shadow-box $color-primary-1;
+  }
+}
+/*-------------------------------*/
+.circle{
+  &{
+    border-radius: 100%;
+  }
+}
+/*-------------------------------*/
+@for $j from 1 to 10{
+  @for $i from 1 to 10{
+    .span{
+      &#{$i*$j*5}{
+        margin: #{$i*$j*5}px;
+      }
+      &top#{$i*$j*5}{
+        margin-top: #{$i*$j*5}px;
+      }
+      &bottom#{$i*$j*5}{
+        margin-bottom: #{$i*$j*5}px;
+      }
+      &left#{$i*$j*5}{
+        margin-left: #{$i*$j*5}px;
+      }
+      &right#{$i*$j*5}{
+        margin-right: #{$i*$j*5}px;
+      }
+    }
   }
 }
