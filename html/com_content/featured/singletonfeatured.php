@@ -18,30 +18,24 @@ JHtml::_('behavior.caption');
 
 ?>
 <div class="container-fluid">
-<div class="row blog-featured<?php echo $this->pageclass_sfx;?>" itemscope itemtype="http://schema.org/Blog">
-<?php if ($this->params->get('show_page_heading') != 0) : ?>
-<div class="col-xs-12 page-header">
-	<h1>
-	<?php echo $this->escape($this->params->get('page_heading')); ?>
-	</h1>
-</div>
-<?php endif; ?>
 
 </div>
 </div>
 <div class="container-fluid">
 <?php if (!empty($this->lead_items)) : ?>
-
+	<div class="row">
 	<?php foreach ($this->lead_items as &$item) : ?>
 			<?php
 				$this->item = &$item;
 				echo $this->loadTemplate('item');
 			?>
 	<?php endforeach; ?>
+	</div>
 <?php endif; ?>
 <?php if (!empty($this->intro_items)) : ?>
 	<?php foreach ($this->intro_items as $key => &$item) : ?>
 		<?php if($key%$this->params['num_columns']==0):?>
+			<?php $open=true;?>
 			<div class="row"><?php echo $key;?>
 		<?php endif;?>
 		<?php
@@ -49,10 +43,13 @@ JHtml::_('behavior.caption');
 				$this->key= &$key;
 				echo $this->loadTemplate('introitem');
 		?>
-		<?php if($key%$this->params['num_columns']==0):?>
+		<?php if((($key+1)%$this->params['num_columns']==0)&&($open)):?>
+<?php $open=false;?>
+GAS
 			</div>
 		<?php endif;?>
 	<?php endforeach; ?>
+	<? echo ($open) ? "</div>" : "";unset($open);?>
 <?php endif; ?>
 
 <?php if (!empty($this->link_items)) : ?>

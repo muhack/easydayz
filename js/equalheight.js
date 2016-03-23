@@ -2,12 +2,12 @@
 http://css-tricks.com/equal-height-blocks-in-rows/
 It's been modified into a function called at page load and then each time the page is resized. One large modification was to remove the set height before each new calculation. */
 
-equalheight = function(container){
-
+equalheight = function(maincontainer,container){
 var currentTallest = 0,
      currentRowStart = 0,
      rowDivs = new Array(),
      $el,
+     minheight=jQuery(maincontainer).css('min-height'),
      topPosition = 0;
  jQuery(container).each(function() {
 
@@ -27,21 +27,25 @@ var currentTallest = 0,
      rowDivs.push($el);
      currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
   }
+  if(minheight==''){
+    minheight=currentTallest+"px";
+  }
+  if(minheight<(currentTallest+"vh")){
+    minheight=currentTallest+"px";
+  }
    for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
         rowDivs[currentDiv].css({
-          "min-height" : currentTallest+"px",
+          "min-height" : minheight,
         });
    }
  });
 }
 
 jQuery(window).load(function() {
-  equalheight('.pairheight > *');
-  equalheight('.pairheight .current > *');
+  equalheight('.pairheight','.pairheight > *');
 });
 
 
 jQuery(window).resize(function(){
-  equalheight('.pairheight > *');
-  equalheight('.pairheight .current > *');
+  equalheight('.pairheight','.pairheight > *');
 });

@@ -15,15 +15,15 @@ $images  = json_decode($this->item->images);
 $canEdit = $this->item->params->get('access-edit');
 $info    = $this->item->params->get('info_block_position', 0);
 ?>
-<div class="row featured-singleton <?php echo $item->state == 0 ? ' system-unpublished' : null; ?> clearfix"
+<div class="col-xs-12 featured-singleton <?php echo $item->state == 0 ? ' system-unpublished' : null; ?> clearfix"
 	itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" style="background-image:url('<?php echo $images->image_intro;?>')">
 	<div class="heading col-xs-12">
-		<?php echo $this->item->title;?>
+		<p class="h1"><?php echo $this->item->title;?></p>
 	</div>
-	<div class="pairheight col-xs-12">
-	<div class="description col-xs-12 col-md-5">
+	<div class="body pairheight col-xs-12">
+		<div class="description col-xs-12 col-md-5">
 			<?php echo $this->item->introtext;?>
-	</div>
+		</div>
 		<div class="cover col-xs-12 col-md-7" style="background-image:url('<?php echo $images->image_fulltext;?>')">
 
 		</div>

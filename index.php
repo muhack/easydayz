@@ -37,9 +37,16 @@ else
 
 // Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
+unset($this->_scripts[JURI::root(true).'/media/jui/js/bootstrap.min.js']);
+//$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/jquery.min.js');
+$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/bootstrap.min.js');
+$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/equalheight.js');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/template.js');
 
-// Add Stylesheets
+//Add Stylesheets
+//JHtml::_('bootstrap.loadCss',false);
+$doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/bootstrap.min.css');
+$doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/font-awesome.css');
 $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/template.css');
 
 // Load optional RTL Bootstrap CSS
@@ -83,14 +90,8 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 	</div>
 </header>
 <jdoc:include type="modules" name="menu" style="Navigator" />
-	<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<jdoc:include type="message" />
-						<jdoc:include type="component" />
-					</div>
-				</div>
-	</div>
+<jdoc:include type="message" />
+<jdoc:include type="component" />
 </body>
 	<jdoc:include type="modules" name="debug" style="none" />
 	<jdoc:include type="modules" name="hidden" style="none" />

@@ -1,0 +1,68 @@
+$width-desktop: 1200px;
+$shadow-text-title: 10px 10px 5px;
+$shadow-box: 10px 10px 15px;
+$color-primary-1:#de4500;
+$color-primary-2:#334388;
+$color-secondary-1:white;
+
+/*-------------------------------*/
+.featured-singleton{
+  &{
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+  }
+  & .heading{
+    &{
+      min-height: 20vh;
+      line-height: 20vh;
+    }
+    & *{
+      text-align: center;
+      color:white;
+      text-shadow: $shadow-text-title black;
+    }
+  }
+  & .body{
+    &{
+      min-height: 40vh;
+      padding:20px 0px;
+      @media(min-width: $width-desktop){
+        min-height: 60vh;
+      }
+    }
+    & .description{
+      background-color:rgba(255,255,255,0.7);
+    }
+    & .cover{
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+/*-------------------------------*/
+.cta{
+  &{
+    text-align: center;
+    min-height: 80px;
+  }
+}
+/*-------------------------------*/
+.evidence{
+  &,&:visited{
+    color: $color-primary-1;
+    padding:15px 20px;
+    border:1px solid $color-primary-1;
+    background-color:$color-secondary-1;
+    transition-property: border-color,background,color,text-shadow,box-shadow;
+    transition-duration:0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay:0s;
+  }
+  &:hover,&:focus{
+    background-color: $color-primary-2;
+    color: $color-secondary-1;
+    border-color:$color-secondary-1;
+    box-shadow: $shadow-box $color-primary-1;
+  }
+}
