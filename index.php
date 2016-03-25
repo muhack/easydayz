@@ -75,26 +75,47 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 </head>
 
 <body class="site">
-<div class="container-fluid">
+	<?php if($this->countModules(advbar)):?>
+<div class="container-fluid advbar">
 	<div class="row">
-		<div class="col-xs-12 advbar">
+		<div class="col-xs-12">
 			<jdoc:include type="modules" name="advbar" style="none" />
 		</div>
 	</div>
 </div>
+<?php endif;?>
 <header class="container">
 	<div class="row">
-		<div class="hidden-xs hidden-sm col-md-12">
-			<a href="#" class="logo"></a>
+		<div class="col-xs-12">
+			<a href="<?php echo $this->baseurl;?>" class="logo" style="background-image:url('<?php echo $this->params->get('logoFile');?>')"></a>
 		</div>
 	</div>
 </header>
 <jdoc:include type="modules" name="menu" style="Navigator" />
 <jdoc:include type="message" />
 <jdoc:include type="component" />
-</body>
-	<jdoc:include type="modules" name="debug" style="none" />
-	<jdoc:include type="modules" name="hidden" style="none" />
+<?php if ($this->params->get('showmap')) : ?>
+<div class="container-fluid show-google-maps">
+<?php if($this->countModules('map-images-up')):?>
+    <div class="row">
+        <jdoc:include type="modules" name="map-images-up" style="CoverColumns"/>
+    </div>
+<?php endif;?>
+    <div class="row">
+        <div class="col-xs-4 address-text">
+				<a class="fa fa-map-marker fa-3x" target="_blank" href="https://www.google.it/maps/place/<?php echo $this->params->get('street').'+'.$this->params->get('civicnumber').'+'.$this->params->get('city').'+'.$this->params->get('province').'+'.$this->params->get('region').'+'.$this->params->get('nation');?>"></a>
+        <span><?php echo $this->params->get('street').' '.$this->params->get('civicnumber').', '.$this->params->get('city').'<br>'.$this->params->get('province').', '.$this->params->get('region').', '.$this->params->get('nation');?></span>
+        </div>
+        <div class="col-xs-12 google-maps">
+        </div>
+    </div>
+<?php if($this->countModules('map-images-down')):?>
+    <div class="row">
+        <jdoc:include type="modules" name="map-images-down" style="CoverColumns"/>
+    </div>
+<?php endif;?>
+</div>
+<?php endif;?>
 	<footer class="container-fluid">
 		<div class="row">
 			<div class="col-xs-12 col-sm-4">
@@ -113,4 +134,37 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 			</div>
 		</div>
 	</footer>
+</body>
+<jdoc:include type="modules" name="debug" style="none" />
+<jdoc:include type="modules" name="hidden" style="none" />
+<?php if ($this->params->get('showmap')) : ?>
+<script type="text/javascript" src="<?php echo $this->baseurl . '/templates/'.$this->template.'/js/gmap3.min.js';?>"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+<script type="text/javascript">
+//<![CDATA[
+jQuery(window).load(function() {
+                    jQuery(".google-maps").gmap3({
+                                                 marker:{
+                                                 address:"<?php echo $this->params->get('civicnumber').','.$this->params->get('street').','.$this->params->get('city').','.$this->params->get('province').','.$this->params->get('region').','.$this->params->get('nation');?>",
+                                                 options:{
+                                                    icon: "<?php echo $this->baseurl . '/templates/' . $this->template.'/img/marker.png';?>"
+                                                    }
+                                                 },
+                                                 map:{
+                                                    options:{
+                                                        zoom: 15,
+                                                        scrollwheel:false,
+                                                        mapTypeControl: false,
+                                                        scaleControl: false,
+                                                        zoomControl: false,
+                                                        disableDefaultUI: true,
+                                                        draggable: false
+                                                    }
+                                                 }
+                                                 });
+                    });
+//]]>
+</script>
+
+<?php endif;?>
 </html>

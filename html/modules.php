@@ -60,3 +60,26 @@ function modChrome_Navigator($module, &$params, &$attribs){
 	
 	<?php
 }
+function modChrome_CoverColumns($module, &$params, &$attribs){
+    $col="col-xs-12";
+    switch(JDocumentHTML::countModules($module->position)){
+        case 1:
+        default:
+            $col=" col-xs-12";
+            break;
+        case 2:
+            $col.=" col-sm-6";
+            break;
+        case 3:
+            $col.=" col-sm-4";
+            break;
+        case 4:
+            $col.=" col-sm-6 cod-md-3";
+            break;
+    }
+        ?>
+<div class="<?php echo $col;?> .covercolumns">
+    <?php echo $module->content;?>
+</div>
+<?php
+        }

@@ -25,8 +25,10 @@
 	</files>
 	<positions>
 		<position>advbar</position>
-		<position>menu</position>
-		<position>side-main</position>
+        <position>menu</position>
+        <position>side-main</position>
+        <position>map-images-up</position>
+        <position>map-images-down</position>
 		<position>hidden</position>
 		<position>debug</position>
 	</positions>
@@ -67,12 +69,22 @@
 					description="TPL_EASYDAYZ_FONT_NAME_DESC" />
 			</fieldset>
 			<fieldset name="address">
+                <field name="showmap"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="1"
+                    label="TPL_EASYDAYZ_SHOWMAP_LABEL"
+                    description="TPL_EASYDAYZ_SHOWMAP_DESC"
+                    >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
 				<field name="street" type="text" default="" label="TPL_EASYDAYZ_ADDRESS_STREET_LABEL" description="TPL_EASYDAYZ_ADDRESS_STREET_DESCRIPTION" filter="string" />
 				<field name="civicnumber" type="text" default="" label="TPL_EASYDAYZ_ADDRESS_CIVICNUMBER_LABEL" description="TPL_EASYDAYZ_ADDRESS_CIVICNUMBER_DESCRIPTION" filter="string" />
 				<field name="city" type="text" default="" label="TPL_EASYDAYZ_ADDRESS_CITY_LABEL" description="TPL_EASYDAYZ_ADDRESS_CITY_DESCRIPTION" filter="string" />
 				<field name="province" type="text" default="" label="TPL_EASYDAYZ_ADDRESS_PROVINCE_LABEL" description="TPL_EASYDAYZ_ADDRESS_PROVINCE_DESCRIPTION" filter="string" />
 				<field name="region" type="text" default="" label="TPL_EASYDAYZ_ADDRESS_REGION_LABEL" description="TPL_EASYDAYZ_ADDRESS_REGION_DESCRIPTION" filter="string" />
-				<field name="nation" type="text" default="" label="TPL_EASYDAYZ_ADDRESS_NATION_LABEL" description="TPL_EASYDAYZ_ADDRESS_NATION_DESCRIPTION" filter="string" />
+                <field name="nation" type="text" default="" label="TPL_EASYDAYZ_ADDRESS_NATION_LABEL" description="TPL_EASYDAYZ_ADDRESS_NATION_DESCRIPTION" filter="string" />
 			</fieldset>
 			<fieldset name="officialcontact">
 				<field name="email" type="text" default="" label="TPL_EASYDAYZ_OFFICIALCONTACT_EMAIL_LABEL" description="TPL_EASYDAYZ_OFFICIALCONTACT_EMAIL_DESCRIPTION" filter="string" />

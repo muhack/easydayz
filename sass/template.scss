@@ -1,5 +1,6 @@
 $width-desktop: 1200px;
 $shadow-text-title: 10px 10px 5px;
+$shadow-text-icon: 0px 0px 10px;
 $shadow-box: 10px 10px 15px;
 $color-primary-1:#de4500;
 $color-primary-2:#334388;
@@ -16,6 +17,32 @@ $color-secondary-1:white;
 a{
   &,&:visited,&:hover,&:focus{
     text-decoration: none;
+  }
+}
+/*-------------------------------*/
+body{
+  padding-top:1.4em;
+}
+/*-------------------------------*/
+.advbar{
+  &{
+    text-align: center;
+    top:0;
+    position: fixed;
+    z-index:5;
+    font-size:1.4em;
+    line-height: 1.4em;
+    width: 100%;
+  }
+}
+/*-------------------------------*/
+a.logo{
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  display: block;
+  @media(min-width: $width-desktop){
+    min-height: 20vh;
   }
 }
 /*-------------------------------*/
@@ -79,9 +106,18 @@ a{
   }
 }
 /*-------------------------------*/
-footer{
+footer, .advbar{
   &{
-
+    background-color:$color-primary-2;
+    color:$color-secondary-1;
+  }
+  & a{
+    &,&:visited{
+      color:$color-primary-1;
+    }
+    &:hover,&:focus{
+      color:$color-secondary-1;
+    }
   }
   & .credits{
     &,& > *{
@@ -90,7 +126,51 @@ footer{
   }
 }
 /*-------------------------------*/
+.show{
+    &-google-maps{
+        & .address-text{
+            &{
+              position:relative;
+              z-index:1;
+              top:30vh;
+              min-height:18vh;
+              padding:1vh 5px;
+              background-color:rgba(0,0,0,0.7);
+              color:white;
+              @media(min-width: $width-desktop){
+                text-align: justify;
+                font-size: 2em;
+              }
+            }
+            & a{
+              &,&.visited{
+
+              }
+              &:hover,&:focus{
+                color:$color-primary-1;
+                text-shadow: $shadow-text-icon $color-secondary-1;
+              }
+            }
+        }
+        & .google-maps{
+            min-height:40vh;
+        }
+    }
+}
 /*-------------------------------*/
+.covercolumns{
+    &{
+
+    }
+    & > div{
+        background-size:cover;
+        min-height:40vh;
+        @media(min-width:$width-desktop){
+            background-attachment:fixed;
+            min-height: 400px;
+        }
+    }
+}
 /*-------------------------------*/
 .cta{
   &{
