@@ -84,7 +84,7 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 	</div>
 </div>
 <?php endif;?>
-<header class="container">
+<header class="container-fluid" style="background-image:url('<?php echo $this->params->get('backgroundFile');?>')">
 	<div class="row">
 		<div class="col-xs-12">
 			<a href="<?php echo $this->baseurl;?>" class="logo" style="background-image:url('<?php echo $this->params->get('logoFile');?>')"></a>
@@ -98,7 +98,7 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 <div class="container-fluid show-google-maps">
 <?php if($this->countModules('map-images-up')):?>
     <div class="row">
-        <jdoc:include type="modules" name="map-images-up" style="CoverColumns"/>
+        <jdoc:include type="modules" name="map-images-up" style="CoverColumns" side="up"/>
     </div>
 <?php endif;?>
     <div class="row">
@@ -111,7 +111,7 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
     </div>
 <?php if($this->countModules('map-images-down')):?>
     <div class="row">
-        <jdoc:include type="modules" name="map-images-down" style="CoverColumns"/>
+        <jdoc:include type="modules" name="map-images-down" style="CoverColumns" side="down"/>
     </div>
 <?php endif;?>
 </div>

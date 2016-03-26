@@ -57,7 +57,7 @@ function modChrome_well($module, &$params, &$attribs)
 }
 function modChrome_Navigator($module, &$params, &$attribs){
 	?>
-	
+
 	<?php
 }
 function modChrome_CoverColumns($module, &$params, &$attribs){
@@ -78,7 +78,7 @@ function modChrome_CoverColumns($module, &$params, &$attribs){
             break;
     }
         ?>
-<div class="<?php echo $col;?> .covercolumns">
+<div class="<?php echo $col." covercolumns-".$attribs['side'];?>">
     <?php echo $module->content;?>
 </div>
 <?php

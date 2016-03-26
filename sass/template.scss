@@ -1,4 +1,6 @@
 $width-desktop: 1200px;
+$width-notebook: 992px;
+$width-tablet: 768px;
 $shadow-text-title: 10px 10px 5px;
 $shadow-text-icon: 0px 0px 10px;
 $shadow-box: 10px 10px 15px;
@@ -33,16 +35,37 @@ body{
     font-size:1.4em;
     line-height: 1.4em;
     width: 100%;
+    background-color:$color-primary-2;
+    color:$color-secondary-1;
   }
+  & a{
+    &,&:visited{
+      color:$color-primary-1;
+    }
+    &:hover,&:focus{
+      color:$color-secondary-1;
+    }
+  }
+}
+/*-------------------------------*/
+header{
+
 }
 /*-------------------------------*/
 a.logo{
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 200px;
+  min-height: 25vh;
+  @media(min-width: $width-tablet ){
+    min-height: 35vh;
+  }
+  @media(min-width: $width-notebook){
+    min-height:45vh;
+  }
+  background-size: contain;
   display: block;
   @media(min-width: $width-desktop){
-    min-height: 20vh;
+    min-height: 60vh;
   }
 }
 /*-------------------------------*/
@@ -106,25 +129,6 @@ a.logo{
   }
 }
 /*-------------------------------*/
-footer, .advbar{
-  &{
-    background-color:$color-primary-2;
-    color:$color-secondary-1;
-  }
-  & a{
-    &,&:visited{
-      color:$color-primary-1;
-    }
-    &:hover,&:focus{
-      color:$color-secondary-1;
-    }
-  }
-  & .credits{
-    &,& > *{
-      text-align: center;
-    }
-  }
-}
 /*-------------------------------*/
 .show{
     &-google-maps{
@@ -159,17 +163,108 @@ footer, .advbar{
 }
 /*-------------------------------*/
 .covercolumns{
+  &-up{
+    &{
+      @media(min-width: $width-tablet){
+        margin-bottom:-18vh;
+        margin-top:0vh;
+      }
+    }
+    &:first-child{
+        margin-top:0vh;
+    }
+    &:last-child{
+        margin-bottom:-20vh;
+    }
+  }
+  &-up,&-down{
+    &{
+      padding:0px;
+    }
+    & > div{
+      padding:0px;
+      margin:0px;
+      background-size:cover;
+      min-height:40vh;
+      @media(min-width:$width-desktop){
+          background-attachment:fixed;
+          min-height: 400px;
+      }
+    }
+  }
+}
+/*-------------------------------*/
+footer{
+      &{
+        background-color:$color-primary-2;
+        color:$color-secondary-1;
+      }
+      & a{
+        &,&:visited{
+          color:$color-primary-1;
+        }
+        &:hover,&:focus{
+          color:$color-secondary-1;
+        }
+      }
+      & .credits{
+        &,& > *{
+          text-align: center;
+        }
+      }
+    & ul.nav.menu{
     &{
 
     }
-    & > div{
-        background-size:cover;
-        min-height:40vh;
-        @media(min-width:$width-desktop){
-            background-attachment:fixed;
-            min-height: 400px;
+    & li{
+      & a{
+        &,&:visited{
+          background:none;
         }
+        &:hover,&:focus{
+          background:none;
+          color:$color-secondary-1;
+          text-decoration: underline;
+        }
+      }
     }
+  }
+}
+/*-------------------------------*/
+.bicolumn{
+  &{
+    .body-article{
+      &{
+        padding:20px 0px;
+      }
+      & .text-article{
+        @media(min-width: $width-tablet){
+          -webkit-column-count:2;
+          -moz-column-count:2;
+          column-count:2;
+          -webkit-column-rule: 1px solid $color-primary-2;
+          -moz-column-rule: 1px solid $color-primary-2;
+          column-rule: 1px solid $color-primary-2;
+        }
+          @media(min-width: $width-notebook){
+            -webkit-column-count:3;
+            -moz-column-count:3;
+            column-count:3;
+          }
+            @media(min-width: $width-desktop){
+              -webkit-column-count:4;
+              -moz-column-count:4;
+              column-count:4;
+            }
+
+      }
+      & .cover-article{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+      }
+    }
+  }
 }
 /*-------------------------------*/
 .cta{
