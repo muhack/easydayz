@@ -32,6 +32,8 @@ JHtml::_('behavior.caption');
 	<?php endforeach; ?>
 	</div>
 <?php endif; ?>
+</div>
+<div class="container-fluid">
 <?php if (!empty($this->intro_items)) : ?>
 	<?php
 	switch($this->params['num_columns']){
@@ -70,24 +72,9 @@ JHtml::_('behavior.caption');
 	<?php endforeach; ?>
 	<? echo (!$open) ? "</div>" : "";unset($open);?>
 <?php endif; ?>
-
+</div>
 <?php if (!empty($this->link_items)) : ?>
-	<div class="items-more">
-	<?php echo $this->loadTemplate('links'); ?>
-	</div>
+	<?php
+	 echo $this->loadTemplate('links');
+	 ?>
 <?php endif; ?>
-
-<?php if ($this->params->def('show_pagination', 2) == 1  || ($this->params->get('show_pagination') == 2 && $this->pagination->pagesTotal > 1)) : ?>
-	<div class="pagination">
-
-		<?php if ($this->params->def('show_pagination_results', 1)) : ?>
-			<p class="counter pull-right">
-				<?php echo $this->pagination->getPagesCounter(); ?>
-			</p>
-		<?php  endif; ?>
-				<?php echo $this->pagination->getPagesLinks(); ?>
-	</div>
-<?php endif; ?>
-
-</div>
-</div>
