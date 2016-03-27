@@ -17,7 +17,7 @@ JHtml::_('behavior.caption');
 
 <?php
 $this->subtemplatename = 'articles';
-echo JLayoutHelper::render('joomla.content.category_default', $this);
+echo JLayoutHelper::render('joomla.course.maincategory', $this);
 ?>
 
 </div>
