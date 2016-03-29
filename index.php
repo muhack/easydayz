@@ -121,12 +121,14 @@ JHtml::_('bootstrap.loadCss', false, $this->direction);
 			<div class="col-xs-12 col-sm-4">
 				<jdoc:include type="modules" name="footer-1"/>
 			</div>
-			<div class="col-xs-12 col-sm-4">
+			<div class="col-xs-12 <?php echo ($this->countModules('footer-3')) ? "col-sm-4" : "col-sm-8";?>">
 				<jdoc:include type="modules" name="footer-2"/>
 			</div>
+			<?php if($this->countModules('footer-3')):?>
 			<div class="col-xs-12 col-sm-4">
 				<jdoc:include type="modules" name="footer-3"/>
 			</div>
+			<?php endif;?>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 credits">

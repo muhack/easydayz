@@ -13,17 +13,16 @@ JHtml::_('bootstrap.tooltip');
 
 $class = ' class="first"';
 $lang  = JFactory::getLanguage();
-?>
 
-<?php if (count($this->children[$this->category->id]) > 0) : ?>
+if (count($this->children[$this->category->id]) > 0 && $this->maxLevel != 0) : ?>
+
 	<?php foreach ($this->children[$this->category->id] as $id => $child) : ?>
 		<?php
-		if ($this->params->get('show_empty_categories') || $child->getNumItems(true) || count($child->getChildren())) :
+		if ($this->params->get('show_empty_categories') || $child->numitems || count($child->getChildren())) :
 			if (!isset($this->children[$this->category->id][$id + 1])) :
 				$class = ' class="last"';
 			endif;
 		?>
-
 		<div<?php echo $class; ?>>
 			<?php $class = ''; ?>
 			<?php if ($lang->isRtl()) : ?>
@@ -33,7 +32,7 @@ $lang  = JFactory::getLanguage();
 						<?php echo $child->getNumItems(true); ?>
 					</span>
 				<?php endif; ?>
-				<a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($child->id));?>">
+				<a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($child->id)); ?>">
 				<?php echo $this->escape($child->title); ?></a>
 
 				<?php if (count($child->getChildren()) > 0 && $this->maxLevel > 1) : ?>
@@ -54,16 +53,16 @@ $lang  = JFactory::getLanguage();
 				<?php endif;?>
 			<?php endif;?>
 			</h3>
-			<?php if ($this->params->get('show_subcat_desc') == 1) :?>
-				<?php if ($child->description) : ?>
-					<div class="category-desc">
-						<?php echo JHtml::_('content.prepare', $child->description, '', 'com_content.category'); ?>
-					</div>
-				<?php endif; ?>
-			<?php endif; ?>
 
-			<?php if (count($child->getChildren()) > 0 && $this->maxLevel > 1) :?>
-			<div class="collapse fade" id="category-<?php echo $child->id;?>">
+			<?php if ($this->params->get('show_subcat_desc') == 1) : ?>
+			<?php if ($child->description) : ?>
+				<div class="category-desc">
+					<?php echo JHtml::_('content.prepare', $child->description, '', 'com_content.category'); ?>
+				</div>
+			<?php endif; ?>
+			<?php endif; ?>
+			<?php if (count($child->getChildren()) > 0 && $this->maxLevel > 1) : ?>
+			<div class="collapse fade" id="category-<?php echo $child->id; ?>">
 				<?php
 				$this->children[$child->id] = $child->getChildren();
 				$this->category = $child;
@@ -74,8 +73,8 @@ $lang  = JFactory::getLanguage();
 				?>
 			</div>
 			<?php endif; ?>
-
 		</div>
 		<?php endif; ?>
 	<?php endforeach; ?>
-<?php endif; ?>
+
+<?php endif;

@@ -55,7 +55,7 @@ JHtml::_('behavior.caption');
 			break;
 	}?>
 	<?php foreach ($this->intro_items as $key => &$item) : ?>
-		<?php if($key%$this->params['num_columns']==0):?>
+		<?php if(($key-1)%$this->params['num_columns']==0):?>
 			<?php $open=true;?>
 			<div class="row spantop45 pairheight">
 		<?php endif;?>

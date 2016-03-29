@@ -17,9 +17,11 @@ $info    = $this->item->params->get('info_block_position', 0);
 ?>
 <div class="col-xs-12 featured-singleton <?php echo $item->state == 0 ? ' system-unpublished' : null; ?> clearfix"
 	itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" style="background-image:url('<?php echo $images->image_intro;?>')">
+	<?php if($this->item->show_title):?>
 	<div class="heading col-xs-12">
 		<p class="h1"><?php echo $this->item->title;?></p>
 	</div>
+<?php endif;?>
 	<div class="body pairheight col-xs-12">
 		<div class="description col-xs-12 col-md-5">
 			<?php echo $this->item->introtext;?>

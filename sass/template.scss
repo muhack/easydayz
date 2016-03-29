@@ -158,7 +158,7 @@ a.logo{
               }
             }
             & a{
-              &,&.visited{
+              &,&:visited{
 
               }
               &:hover,&:focus{
@@ -240,6 +240,9 @@ footer{
       }
     }
   }
+  & .controls{
+    color:black;
+  }
 }
 /*-------------------------------Manifesto-------------------------------*/
 .bicolumn{
@@ -278,11 +281,54 @@ footer{
   }
 }
 /*-------------------------------Course*-------------------------------*/
-.course{
+.courses{
   &{
 
   }
-  & .cover{
+  & .list-course{//Contenuti singolo corso
+    &{
+      border-color:1px 0px solid $color-primary-1;
+    }
+    & .details{
+      &{
+
+      }
+      & .avatar{
+          min-height: 40vh;
+          background-size: contain;
+          background-repeat: no-repeat;
+      }
+      & .links{
+        &,& li{
+          list-style:none;
+          display: inline;
+          text-align: center;
+          margin:0px;
+          padding:0px;
+        }
+        & li > *{
+          padding:2px;
+        }
+        & li span{
+          color:grey;
+        }
+      }
+    }
+      & .modal{
+        &{
+
+        }
+        & .modal-body{
+          & .cover{
+            min-height: 40vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+  }
+  & .list-courses{//Lista corsi
+
   }
 }
 /*-------------------------------*/
@@ -315,6 +361,17 @@ footer{
 .circle{
   &{
     border-radius: 100%;
+  }
+}
+.icon{
+  & a{
+    &,&:visited{
+
+    }
+    &:hover,&:focus{
+      color:$color-primary-1;
+      text-shadow: $shadow-text-icon $color-secondary-1;
+    }
   }
 }
 /*-------------------------------*/

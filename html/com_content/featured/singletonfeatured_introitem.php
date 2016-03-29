@@ -16,12 +16,14 @@ $canEdit = $this->item->params->get('access-edit');
 $info    = $this->item->params->get('info_block_position', 0);
 ?>
 <div class="introitem col-xs-12 <?php echo $this->col;?>">
+	<div
 	<?php if($images->image_intro!=''):?>
-		<div class="cover" style="background-image:url('<?php echo $images->image_intro;?>')">
+		class="cover" style="background-image:url('<?php echo $images->image_intro;?>')"
 	<?php else:?>
-		<div class="cta">
-			<a class="circle evidence fa fa-5x <?php echo $images->image_intro_alt;?>" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language)); ?>"></a>
+		class="cta">
+			<a class="circle evidence fa fa-5x <?php echo $images->image_intro_alt;?>" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language)); ?>"></a
 	<?php endif;?>
+	>
 	</div>
 	<div class="heading shadow-title">
 		<p class="h1"><?php echo $this->item->title;?></p>
