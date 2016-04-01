@@ -50,51 +50,51 @@ $date_to_print=(JString::strcmp($this->item->publish_down,'0000-00-00 00:00:00')
     </ul>
     <?php
     if($images->image_intro):?>
-    <div class="avatar" style="background-image:url('<?php echo $images->image_intro;?>');'"></div>
-  <?php endif;?>
+      <div class="avatar" style="background-image:url('<?php echo $images->image_intro;?>');'"></div>
+    <?php endif;?>
   </div>
-<div class="col-xs-12 col-sm-8 desc">
-  <?php echo $this->item->introtext;?>
-    <?php	if($this->item->readmore):?>
-        <button data-toggle="modal" data-target="#course-<?php echo $this->item->id;?>" class="evidence">
-      <?php $attribs = json_decode($this->item->attribs); ?>
-      <?php
-      if ($attribs->alternative_readmore == null) :
-        echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
-      elseif ($readmore = $this->item->alternative_readmore) :
-        echo $readmore;
-      elseif ($params->get('show_readmore_title', 0) == 0) :
-        echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
-      else :
-        echo JText::_('COM_CONTENT_READ_MORE');
-        echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
-      endif; ?>
-    </button>
-    </div>
+  <div class="col-xs-12 col-sm-8 desc">
+    <?php echo $this->item->introtext;?>
+      <?php	if($this->item->readmore):?>
+          <button data-toggle="modal" data-target="#course-<?php echo $this->item->id;?>" class="evidence">
+          <?php $attribs = json_decode($this->item->attribs); ?>
+          <?php
+          if ($attribs->alternative_readmore == null) :
+            echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
+          elseif ($readmore = $this->item->alternative_readmore) :
+            echo $readmore;
+          elseif ($params->get('show_readmore_title', 0) == 0) :
+            echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');
+          else :
+            echo JText::_('COM_CONTENT_READ_MORE');
+            echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));
+          endif; ?>
+        </button>
+      </div>
       <!-- Modal -->
     <div class="modal fade" id="course-<?php echo $this->item->id;?>" tabindex="-1" role="dialog" aria-labelledby="course-<?php echo $this->item->id;?>-label">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="course-<?php echo $this->item->id;?>-label">
-              <?php echo $this->item->title;?>
-            </h4>
-        </div>
-        <div class="modal-body">
-          <?php if($images->image_fulltext):?>
-          <div class="cover" style="background-image:url('<?php echo $images->image_fulltext;?>');">
-
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="course-<?php echo $this->item->id;?>-label">
+                <?php echo $this->item->title;?>
+              </h4>
           </div>
-        <?php endif;?>
-          <?php echo $this->item->fulltext;?>
-        <div class="modal-footer">
-        </div>
+          <div class="modal-body">
+            <?php if($images->image_fulltext):?>
+              <div class="cover" style="background-image:url('<?php echo $images->image_fulltext;?>');"></div>
+            <?php endif;?>
+            <?php echo $this->item->fulltext;?>
+            <div class="modal-footer">
+              <button type="button" class="evidence" data-dismiss="modal" aria-label="Close">Torna indietro</button>
+            </div>
+          </div>
+      </div>
       </div>
     </div>
+  <?php else:?>
     </div>
-    </div>
-    <?php endif;	?>
-</div>
+  <?php endif;	?>
 </div>
 <?php echo $this->item->event->afterDisplayContent; ?>
