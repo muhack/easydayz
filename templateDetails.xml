@@ -21,24 +21,23 @@
 		<folder>img</folder>
 		<folder>js</folder>
 		<folder>language</folder>
-		<folder>sass</folder>
+		<folder>scss</folder>
 	</files>
 	<positions>
-		<position>advbar</position>
-        <position>menu</position>
-        <position>side-main</position>
-        <position>map-images-up</position>
-        <position>map-images-down</position>
-		<position>footer-1</position>
-		<position>footer-2</position>
-		<position>footer-3</position>
-		<position>credits</position>
-<position>hidden</position>
-<position>debug</position>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.tpl_easydayz.ini</language>
 		<language tag="en-GB">en-GB/en-GB.tpl_easydayz.sys.ini</language>
+		<language tag="it-IT">en-GB/it-IT.tpl_easydayz.ini</language>
+		<language tag="it-IT">en-GB/it-IT.tpl_easydayz.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">

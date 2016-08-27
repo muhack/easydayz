@@ -14,159 +14,77 @@ $doc             = JFactory::getDocument();
 $user            = JFactory::getUser();
 $this->language  = $doc->language;
 $this->direction = $doc->direction;
+$client=new JApplicationWebClient();
 
-// Getting params from template
 $params = $app->getTemplate(true)->params;
 
-// Detecting Active Variables
-$option   = $app->input->getCmd('option', '');
-$view     = $app->input->getCmd('view', '');
-$layout   = $app->input->getCmd('layout', '');
-$task     = $app->input->getCmd('task', '');
-$itemid   = $app->input->getCmd('Itemid', '');
 $sitename = $app->get('sitename');
 
-if($task == "edit" || $layout == "form" )
-{
-	$fullWidth = 1;
-}
-else
-{
-	$fullWidth = 0;
-}
 
-// Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
 unset($this->_scripts[JURI::root(true).'/media/jui/js/bootstrap.min.js']);
-//$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/jquery.min.js');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/bootstrap.min.js');
-$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/equalheight.js');
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/template.js');
 
-//Add Stylesheets
-//JHtml::_('bootstrap.loadCss',false);
+
 $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/bootstrap.min.css');
 $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/font-awesome.css');
-$doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/template.css');
+if($client->mobile):
+    $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/tmpl_mobile.css');
+else:
+    $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/tmpl_desktop.css');
+endif;
 
-// Load optional RTL Bootstrap CSS
-JHtml::_('bootstrap.loadCss', false, $this->direction);
-
-// Logo file or site title param
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<jdoc:include type="head" />
-	<?php // Use of Google Font ?>
-	<?php if ($this->params->get('googleFont')) : ?>
-		<link href='//fonts.googleapis.com/css?family=<?php echo $this->params->get('googleFontName'); ?>' rel='stylesheet' type='text/css' />
-		<style type="text/css">
-			h1,h2,h3,h4,h5,h6,.site-title{
-				font-family: '<?php echo str_replace('+', ' ', $this->params->get('googleFontName')); ?>', sans-serif;
-			}
-		</style>
-	<?php endif; ?>
-	<?php // Template color ?>
-	<!--[if lt IE 9]>
-		<script src="<?php echo JUri::root(true); ?>/media/jui/js/html5.js"></script>
-	<![endif]-->
-</head>
+    <head>
 
-<body class="site">
-	<?php if($this->countModules(advbar)):?>
-<div class="container-fluid advbar">
-	<div class="row">
-		<div class="col-xs-12">
-			<jdoc:include type="modules" name="advbar" style="none" />
-		</div>
-	</div>
-</div>
-<?php endif;?>
-<header class="container-fluid" style="background-image:url('<?php echo $this->params->get('backgroundFile');?>')">
-	<div class="row">
-		<div class="col-xs-12">
-			<a href="<?php echo $this->baseurl;?>" class="logo" style="background-image:url('<?php echo $this->params->get('logoFile');?>')"></a>
-		</div>
-	</div>
-</header>
-<jdoc:include type="modules" name="menu" style="Navigator" />
-<jdoc:include type="message" />
-<jdoc:include type="component" />
-<?php if ($this->params->get('showmap')) : ?>
-<div class="container-fluid show-google-maps">
-<?php if($this->countModules('map-images-up')):?>
-    <div class="row">
-        <jdoc:include type="modules" name="map-images-up" style="CoverColumns" side="up"/>
-    </div>
-<?php endif;?>
-    <div class="row">
-        <div class="col-xs-4 address-text">
-				<a class="fa fa-map-marker fa-3x" target="_blank" href="https://www.google.it/maps/place/<?php echo $this->params->get('street').'+'.$this->params->get('civicnumber').'+'.$this->params->get('city').'+'.$this->params->get('province').'+'.$this->params->get('region').'+'.$this->params->get('nation');?>"></a>
-        <span><?php echo $this->params->get('street').' '.$this->params->get('civicnumber').', '.$this->params->get('city').'<br>'.$this->params->get('province').', '.$this->params->get('region').', '.$this->params->get('nation');?></span>
+    </head>
+    <body>
+        <div class="topbar container-fluid">
+            <div class="row">
+                <div class="col-hidden-xs col-sm-8">
+                    <jdoc:include type="modules" name="position-0" />
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <jdoc:include type="modules" name="position-1" />
+                </div>
+            </div>
         </div>
-        <div class="col-xs-12 google-maps">
+        <jdoc:include type="modules" name="position-2" baseurl="<?php echo $this->baseurl;?>" name="menu" style="navmenu" typemenu="navigation" idmenu="MenuNav" logo="<?php echo $params->get('logoFile');?>" logomobile="<?php echo $params->get('logoMobileFile');?>" />
+        <div class="row content">
+            <div class="col-xs-12 col-sm-8">
+                <jdoc:include type="message" />
+                <jdoc:include type="component" />
+                <jdoc:include type="modules" name="position-3" />
+            </div>
+            <div class="col-xs-12 col-sm-4 sidebar">
+                <jdoc:include type="modules" name="position-4" />
+            </div>
         </div>
-    </div>
-<?php if($this->countModules('map-images-down')):?>
-    <div class="row">
-        <jdoc:include type="modules" name="map-images-down" style="CoverColumns" side="down"/>
-    </div>
-<?php endif;?>
-</div>
-<?php endif;?>
-	<footer class="container-fluid">
-		<div class="row">
-			<div class="col-xs-12 col-sm-4">
-				<jdoc:include type="modules" name="footer-1"/>
-			</div>
-			<div class="col-xs-12 <?php echo ($this->countModules('footer-3')) ? "col-sm-4" : "col-sm-8";?>">
-				<jdoc:include type="modules" name="footer-2"/>
-			</div>
-			<?php if($this->countModules('footer-3')):?>
-			<div class="col-xs-12 col-sm-4">
-				<jdoc:include type="modules" name="footer-3"/>
-			</div>
-			<?php endif;?>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 credits">
-					<jdoc:include type="modules" name="credits"/>
-			</div>
-		</div>
-	</footer>
-</body>
-<jdoc:include type="modules" name="debug" style="none" />
-<jdoc:include type="modules" name="hidden" style="none" />
-<?php if ($this->params->get('showmap')) : ?>
-<script type="text/javascript" src="<?php echo $this->baseurl . '/templates/'.$this->template.'/js/gmap3.min.js';?>"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
-<script type="text/javascript">
-//<![CDATA[
-jQuery(window).load(function() {
-                    jQuery(".google-maps").gmap3({
-                                                 marker:{
-                                                 address:"<?php echo $this->params->get('civicnumber').','.$this->params->get('street').','.$this->params->get('city').','.$this->params->get('province').','.$this->params->get('region').','.$this->params->get('nation');?>",
-                                                 options:{
-                                                    icon: "<?php echo $this->baseurl . '/templates/' . $this->template.'/img/marker.png';?>"
-                                                    }
-                                                 },
-                                                 map:{
-                                                    options:{
-                                                        zoom: 15,
-                                                        scrollwheel:false,
-                                                        mapTypeControl: false,
-                                                        scaleControl: false,
-                                                        zoomControl: false,
-                                                        disableDefaultUI: true,
-                                                        draggable: false
-                                                    }
-                                                 }
-                                                 });
-                    });
-//]]>
-</script>
+        <jdoc:include type="modules" name="position-5" />
+        <footer>
+            <div class="container">
+                <?php if(countModules($this->countModules('position-6')) || countModules($this->countModules('position-7'))):?>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3">
+                        <jdoc:include type="modules" name="position-6" />
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <jdoc:include type="modules" name="position-7" />
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
 
-<?php endif;?>
+                    </div>
+                </div>
+                <?php endif;?>
+            </div>
+        </footer>
+        <div class="bottombar">
+            <p class="text-center">
+                <?php echo $params->get('address');?>, <?php echo $params->get('civicnumber');?> • <?php echo $params->get('city');?>, <?php echo $params->get('province');?> • <?php echo $params->get('state');?> • <?php echo $params->get('nation');?>
+            </p>
+        </div>
+    </body>
 </html>
