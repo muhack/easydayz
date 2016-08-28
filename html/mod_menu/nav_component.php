@@ -10,25 +10,32 @@
 defined('_JEXEC') or die;
 
 // Note. It is important to remove spaces between elements.
-if(!JString::stristr($item->anchor_css,"no_standard")):
-?>
-<div class="col-xs-12 <?php echo $item->anchor_css?>">
-	<div class="introcover" style="background-image:url('<?php echo $item->menu_image;?>')">
-		<div class="title">
-			<a class="cta-title" href="<?php echo $item->flink; ?>"
-				<?php echo $item->anchor_title ? 'title="' . $item->anchor_title . '" ' : '';?>
-				<?php echo $item->anchor_rel ? 'rel="' . $item->anchor_rel . '"' : '';?>>
-				<?php echo $item->title; ?>
-			</a>
-		</div>
-	</div>
-</div>
-<?php
-else:
-	?>
-	<a class="<?php echo $item->anchor_css; ?>" href="<?php echo $item->flink; ?>"
-		<?php echo $item->anchor_title ? 'title="' . $item->anchor_title . '" ' : '';?>
-		<?php echo $item->anchor_rel ? 'rel="' . $item->anchor_rel . '"' : '';?>>
-		<?php echo $item->title; ?>
-	</a>
-<?php endif;?>
+$class = $item->anchor_css ? 'class="' . $item->anchor_css . '" ' : '';
+$title = $item->anchor_title ? 'title="' . $item->anchor_title . '" ' : '';
+
+if ($item->menu_image) {
+	$item->params->get('menu_text', 1) ?
+		$linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" /><span class="image-title">' . $item->title . '</span> ' :
+		$linktype = '<img src="' . $item->menu_image . '" alt="' . $item->title . '" />';
+} else {
+	$linktype = $item->title;
+}
+
+switch ($item->browserNav) {
+	default:
+	case 0:
+		?>
+		<a <?php echo $class; ?>href="<?php echo $item->flink; ?>" <?php echo $title; ?>><?php echo $linktype; ?></a><?php
+		break;
+	case 1:
+		// _blank
+		?><a <?php echo $class; ?>href="<?php echo $item->flink; ?>"
+		target="_blank" <?php echo $title; ?>><?php echo $linktype; ?></a><?php
+		break;
+	case 2:
+		// Use JavaScript "window.open"
+		?><a <?php echo $class; ?>href="<?php echo $item->flink; ?>"
+		onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');return false;" <?php echo $title; ?>><?php echo $linktype; ?></a>
+		<?php
+		break;
+}

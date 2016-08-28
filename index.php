@@ -64,9 +64,12 @@ endif;
                 </div>
             </div>
         </div>
-        <?php echo $this->baseurl;?>
-        <jdoc:include type="modules" name="position-2" style="navmenu" baseurl="<?php echo $this->baseurl;?>" name="menu" typemenu="navigation" idmenu="MenuNav" logo="<?php echo $params->get('logoFile');?>" logomobile="<?php echo $params->get('logoMobileFile');?>" />
-        <div class="container">
+        <div class="container navigator">
+            <div class="row">
+                <div class="col-xs-12">
+                    <jdoc:include type="modules" name="position-2" />
+                </div>
+            </div>
             <div class="row content equalheight">
                 <div class="col-xs-12 col-sm-8">
                     <jdoc:include type="message" />

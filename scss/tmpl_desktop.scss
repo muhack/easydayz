@@ -4,6 +4,19 @@ $color : #007707;
   color:$color;
   text-shadow: 1px 1px 1px white;
 }
+.btn{
+  &-primary{
+	&{
+	  color: #fff;
+	  background-color: $color;
+	  border-color: $color;
+	}
+	&:hover,&:focus{
+	  color: $color;
+	  background-color: white;
+	}
+  }
+}
 /*single unit*/
 .cover{
   &{
@@ -71,6 +84,16 @@ ul{
 	}
   }
 }
+/*SideBar*/
+.sidebar{
+  &{
+	border:1px solid $color;
+	border-width: 0px 0px 0px 1px;
+	background:#EFEFEF;
+	color:#393939;
+  }
+}
+/*Calendar Module*/
 .calendar{
   &{
 	padding:20px 0px;
@@ -99,20 +122,52 @@ ul{
 		  line-height:30px;
 		}
 		& .author{
-		  font-style: 15px;
+		  font-size: 15px;
 		  line-height:15px;
 		}
 	  }
 	}
   }
 }
-/*SideBar*/
-.sidebar{
+/*Menu*/
+.navigator{
   &{
-	border:1px solid $color;
-	border-width: 0px 0px 0px 1px;
-	background:#EFEFEF;
-	color:#393939;
+	
+  }
+  & .row > div{
+	padding-right:0px;
+  }
+  &#MainMenu{
+	&{
+	  border-color: white;
+	  border: white;
+	  background: none;
+	  border-bottom:1px solid $color;
+	  border-radius:0px;
+	  margin-bottom:0px;
+	}
+	& ul.nav{
+	  &{
+		width:100%;
+	  }
+	  & li{
+		&{
+		  width:20%;
+		}
+	  	& a {
+			& {
+		  	color: $color;
+		  	text-align:center;
+			}
+	  	}
+	  	&.active a{
+			&, &:focus, &:hover{
+			  background:$color;
+			  color:white;
+			}
+	  	}
+	  }
+	}
   }
 }
 /*Article*/
