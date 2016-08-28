@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 
 // Note. It is important to remove spaces between elements.
-$client=new JApplicationWebClient();
+$client=new JWebClient();
 $client->string="".($client->mobile)? "-mobile":"";
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>

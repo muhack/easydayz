@@ -14,8 +14,7 @@ $doc             = JFactory::getDocument();
 $user            = JFactory::getUser();
 $this->language  = $doc->language;
 $this->direction = $doc->direction;
-$client=new JApplicationWebClient();
-
+$client =new JWebClient();
 $params = $app->getTemplate(true)->params;
 
 $sitename = $app->get('sitename');
@@ -33,13 +32,26 @@ if($client->mobile):
     $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/tmpl_mobile.css');
 else:
     $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/tmpl_desktop.css');
+    $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/template.js');
 endif;
 
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
     <head>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <jdoc:include type="head" />
+        <?php if ($this->params->get('googleFont')) : ?>
+            <link href='//fonts.googleapis.com/css?family=<?php echo $this->params->get('googleFontName'); ?>' rel='stylesheet' type='text/css' />
+            <style type="text/css">
+                h1,h2,h3,h4,h5,h6,.site-title{
+                    font-family: '<?php echo str_replace('+', ' ', $this->params->get('googleFontName')); ?>', sans-serif;
+                }
+            </style>
+        <?php endif; ?>
+        <!--[if lt IE 9]>
+        <script src="<?php echo JUri::root(true); ?>/media/jui/js/html5.js"></script>
+        <![endif]-->
     </head>
     <body>
         <div class="topbar container-fluid">
@@ -52,21 +64,24 @@ endif;
                 </div>
             </div>
         </div>
-        <jdoc:include type="modules" name="position-2" baseurl="<?php echo $this->baseurl;?>" name="menu" style="navmenu" typemenu="navigation" idmenu="MenuNav" logo="<?php echo $params->get('logoFile');?>" logomobile="<?php echo $params->get('logoMobileFile');?>" />
-        <div class="row content">
-            <div class="col-xs-12 col-sm-8">
-                <jdoc:include type="message" />
-                <jdoc:include type="component" />
-                <jdoc:include type="modules" name="position-3" />
-            </div>
-            <div class="col-xs-12 col-sm-4 sidebar">
-                <jdoc:include type="modules" name="position-4" />
+        <?php echo $this->baseurl;?>
+        <jdoc:include type="modules" name="position-2" style="navmenu" baseurl="<?php echo $this->baseurl;?>" name="menu" typemenu="navigation" idmenu="MenuNav" logo="<?php echo $params->get('logoFile');?>" logomobile="<?php echo $params->get('logoMobileFile');?>" />
+        <div class="container">
+            <div class="row content equalheight">
+                <div class="col-xs-12 col-sm-8">
+                    <jdoc:include type="message" />
+                    <jdoc:include type="component" />
+                    <jdoc:include type="modules" name="position-3" />
+                </div>
+                <div class="col-xs-12 col-sm-4 sidebar">
+                    <jdoc:include type="modules" name="position-4" />
+                </div>
             </div>
         </div>
         <jdoc:include type="modules" name="position-5" />
         <footer>
             <div class="container">
-                <?php if(countModules($this->countModules('position-6')) || countModules($this->countModules('position-7'))):?>
+                <?php if($this->countModules('position-6') || $this->countModules('position-7')):?>
                 <div class="row">
                     <div class="col-xs-12 col-sm-3">
                         <jdoc:include type="modules" name="position-6" />

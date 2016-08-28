@@ -1,0 +1,114 @@
+<?php
+/**
+ * @package     Joomla.Site
+ * @subpackage  com_content
+ *
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+defined('_JEXEC') or die;
+
+JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
+
+// Create shortcuts to some parameters.
+$params  = $this->item->params;
+$images  = json_decode($this->item->images);
+$urls    = json_decode($this->item->urls);
+$info    = $params->get('info_block_position', 0);
+JHtml::_('behavior.caption');
+jimport('joomla.application.module.helper');
+$sidebar = JModuleHelper::getModules('sidebar');
+$client=new JApplicationWebClient();
+?>
+<main class="container item-page<?php echo $this->pageclass_sfx; ?>">
+	<div class="row " itemscope itemtype="https://schema.org/Article">
+		<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
+		<div class="col-xs-12 cover" <?php if(!$client->mobile):?>style="background-image:url('<?php echo $images->image_fulltext;?>')"<?php endif;?>>
+		<header class="page-header">
+			<div class="intro">
+				<h1> <?php echo $this->item->title; ?> </h1>
+				<?php if(!$client->mobile):?>
+					<?php echo $this->item->introtext; ?>
+				<?php endif;?>
+			</div>
+		</header>
+	</div>
+	<?php if($client->mobile):?>
+		<div class="col-xs-6 text-center">
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#author">
+  			<span class="fa fa-4 fa-info"></span>
+			</button>
+		</div>
+		<div class="col-xs-6 text-center">
+			<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sidebar">
+  			<span class="fa fa-4 fa-hashtag"></span>
+			</button>
+		</div>
+	<?php else:?>
+		<div class="col-xs-12 author">
+		</div>
+	<?php endif;?>
+</div>
+	<section class="page-body col-xs-12 <?php if(!$client->mobile):?>col-sm-8<?php endif;?>">
+		<?php echo $this->item->text; ?>
+	</section>
+	<?php if(!($client->mobile)):?>
+		<section class="page-sidebar col-xs-12 col-sm-4">
+			<?php
+				foreach($sidebar as $mod):
+					echo JModuleHelper::renderModule($mod);
+				endforeach;
+			?>
+		</section>
+	<?php endif;?>
+</main>
+<?php if($client->mobile):?>
+	<!-- Modal -->
+<div class="modal fade" id="author" tabindex="-1" role="dialog" aria-labelledby="authorLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="authorLabel">Dettagli</h4>
+      </div>
+      <div class="modal-body">
+				<div class="cover" style="background-image:url('<?php echo $images->image_fulltext;?>')">
+				</div>
+				<?php echo $this->item->introtext; ?>
+				<?php if (isset($urls) && ((!empty($urls->urls_position) && ($urls->urls_position == '0')) || ($params->get('urls_position') == '0' && empty($urls->urls_position)))
+					|| (empty($urls->urls_position) && (!$params->get('urls_position')))) : ?>
+				<?php echo $this->loadTemplate('links'); ?>
+			<?php endif;?>
+			<?php echo $this->item->introtext; ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="sidebar" tabindex="-1" role="dialog" aria-labelledby="sidebarLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="sidebarLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+				<?php
+					foreach($sidebar as $mod):
+						echo JModuleHelper::renderModule($mod);
+					endforeach;
+				?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<?php endif;?>

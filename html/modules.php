@@ -55,7 +55,8 @@ function modChrome_well($module, &$params, &$attribs)
 	}
 }
 function modChrome_navmenu($module, &$params, &$attribs){
-	$client=new JApplicationWebClient();
+	echo "TEST FES";
+	$client=new JWebClient();
 	if($client->mobile):?>
 	<a class="logo hidden-sm" href="<?php echo $attribs["baseurl"];?>" style="background-image:url('<?php echo $attribs["logo"];?>'')"></a>
 	<nav class="navbar navbar-default navbar-fixed-top <?php echo $attribs["typemenu"];?>">
@@ -100,7 +101,7 @@ function modChrome_navmenu($module, &$params, &$attribs){
 }
 
 function modChrome_bottombar($module, &$params, &$attribs){
-	$client=new JApplicationWebClient();
+	$client=new JWebClient();
 	if($client->mobile):?>
 	<div class="bottom">
 		<?php echo $module->content;?>

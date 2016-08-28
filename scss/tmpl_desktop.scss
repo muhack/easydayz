@@ -1,0 +1,168 @@
+$color : #007707;
+/* Color Font Awesome*/
+.fa{
+  color:$color;
+  text-shadow: 1px 1px 1px white;
+}
+/*single unit*/
+.cover{
+  &{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	min-height:300px;
+	width:100%;
+	margin-bottom:10px;
+  }
+  & .headline{
+	&{
+	  position: absolute;
+	  bottom:0;
+	  width: 100%;
+	}
+	& .transition{
+	  min-height:30px;
+	  background-repeat:no-repeat;
+	  background-repeat:repeat-x;
+	  background-image: url('../img/transition80.png');
+	}
+	& .text{
+	  &{
+		background:rgba(0,	0,0,0.8);
+		color: white;
+	  }
+	  & *{
+		padding: 10px;
+		margin: 0px;
+	  }
+	}
+  }
+}
+ul{
+  &.list{
+	&,& li, & ul{
+	  margin:0px;
+	  padding:0px;
+	}
+	&-inline{
+	  &,& li, & ul{
+		display: inline;
+	  }
+	}
+  }
+  &.cta{
+	&{
+	  display: block;
+	}
+	& li{
+	  &{
+		padding:5px;
+	  }
+	  & a{
+		border-radius:100%;
+		background: $color;
+		color:white;
+		width:20px;
+		font-size:20px;
+		line-height:20px;
+		text-align: center;
+	  }
+	}
+  }
+}
+.calendar{
+  &{
+	padding:20px 0px;
+  }
+  & .event{
+	&{
+	}
+	& .first-row{
+	  &{
+		clear: both;
+	  }
+	  & .time{
+		float:left;
+		font-size: 40px;
+		line-height: 40px;
+		padding: 5px;
+		color: $color;
+		text-shadow: 1px 1px 0px white;
+	  }
+	  & > div{
+		&{
+		  padding:5px;
+		}
+		& .title{
+		  font-size:30px;
+		  line-height:30px;
+		}
+		& .author{
+		  font-style: 15px;
+		  line-height:15px;
+		}
+	  }
+	}
+  }
+}
+/*SideBar*/
+.sidebar{
+  &{
+	border:1px solid $color;
+	border-width: 0px 0px 0px 1px;
+	background:#EFEFEF;
+	color:#393939;
+  }
+}
+/*Article*/
+main.article{
+  &{
+	
+  }
+  & .details{
+	& ul{
+	  &{
+		
+	  }
+	  & li{
+		&{
+		  padding:10px;
+		  line-height:20px;
+		  font-size:12px;
+		  color: #9d9d9d;
+		}
+		& span{
+		  font-size: 20px;
+		}
+		& .fa{
+		  color: $color;
+		}
+	  }
+	  & li.tags-list{
+		&{
+		  
+		}
+		& .fa-tag{
+		  font-size:10px;
+		}
+	  }
+	}
+  }
+  & .content{
+	& > *{
+	  padding:10px;
+	}
+	& .text-intro{
+	  padding: 20px;
+	  line-height: 2;
+	  font-size: 15px;
+	  font-style: italic;
+	  text-align: justify;
+	  border:1px solid $color;
+	  border-width: 1px 0px;
+	  background:#EFEFEF;
+	  color:#393939;
+	}
+  }
+}
