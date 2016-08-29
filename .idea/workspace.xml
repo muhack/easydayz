@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="711eb38f-f16e-4e2f-b81e-47c41d5511d3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/html/com_content/category/default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/html/com_content/category/default_children.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/html/com_content/category/default_articles.php" afterPath="$PROJECT_DIR$/html/com_content/article/temp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/ad14ad0a23ea7b2403291c0c1a9f7469323f2c41/tmpl_desktop.scssc" afterPath="$PROJECT_DIR$/.sass-cache/ad14ad0a23ea7b2403291c0c1a9f7469323f2c41/tmpl_desktop.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/tmpl_desktop.css" afterPath="$PROJECT_DIR$/css/tmpl_desktop.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/tmpl_desktop.css.map" afterPath="$PROJECT_DIR$/css/tmpl_desktop.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/com_content/category/blog.php" afterPath="$PROJECT_DIR$/html/com_content/category/blog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/com_content/category/blog.xml" afterPath="$PROJECT_DIR$/html/com_content/category/blog.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/com_content/category/blog_children.php" afterPath="$PROJECT_DIR$/html/com_content/category/blog_children.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/com_content/category/blog_item.php" afterPath="$PROJECT_DIR$/html/com_content/category/blog_item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/tmpl_desktop.scss" afterPath="$PROJECT_DIR$/scss/tmpl_desktop.scss" />
-    </list>
+    <list default="true" id="711eb38f-f16e-4e2f-b81e-47c41d5511d3" name="Default" comment="" />
     <ignored path="easydayz.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -42,8 +29,8 @@
           <file leaf-file-name="tmpl_desktop.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/scss/tmpl_desktop.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="482">
-                  <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+                <state relative-caret-position="152">
+                  <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
                   <folding />
                 </state>
               </provider>
@@ -90,9 +77,11 @@
           <file leaf-file-name="blog_item.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/html/com_content/category/blog_item.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="21" column="83" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
-                  <folding />
+                <state relative-caret-position="255">
+                  <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -1031,12 +1020,12 @@
       <updated>1472301249629</updated>
       <workItem from="1472301252853" duration="249000" />
       <workItem from="1472301770113" duration="13338000" />
-      <workItem from="1472340205684" duration="21115000" />
+      <workItem from="1472340205684" duration="21248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34702000" />
+    <option name="totallyTimeSpent" value="34835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1080" width="1920" height="1080" extended-state="0" />
@@ -1405,18 +1394,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/tmpl_desktop.scss">
+    <entry file="file://$PROJECT_DIR$/html/com_content/category/blog_item.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/com_content/category/blog_item.php">
+    <entry file="file://$PROJECT_DIR$/scss/tmpl_desktop.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="83" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
+        <state relative-caret-position="152">
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
           <folding />
         </state>
       </provider>
