@@ -101,7 +101,7 @@ endif;
         </footer>
         <div class="bottombar">
             <p class="text-center">
-                <?php echo $params->get('address');?>, <?php echo $params->get('civicnumber');?> • <?php echo $params->get('city');?>, <?php echo $params->get('province');?> • <?php echo $params->get('state');?> • <?php echo $params->get('nation');?>
+                <?php echo $params->get('street');?>, <?php echo $params->get('civicnumber');?> • <?php echo $params->get('city');?>, <?php echo $params->get('province');?> • <?php echo $params->get('state');?> • <?php echo $params->get('nation');?>
             </p>
         </div>
     </body>

@@ -10,17 +10,17 @@
 defined('_JEXEC') or die;
 
 ?>
-<div class="calendar">
+<div class="calendar-events-list">
     <p class="h1 text-center">
         <?php echo $module->title;?>
     </p>
     <div class="list-events">
     <?php foreach($list as $item):?>
         <section class="event">
-            <div class="first-row equalheight">
-                <p class="time">
+            <div class="first-row pairheight">
+                <div class="time">
                     <span class="day"><?php echo JHtml::_('date', $item->publish_up, JText::_('d')); ?></span>/<span class="month"><?php echo JHtml::_('date', $item->publish_up, JText::_('n')); ?></span>
-                </p>
+                </div>
                 <div>
                     <p class="title">
                         <?php echo $item->title; ?>

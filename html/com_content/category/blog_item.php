@@ -48,4 +48,9 @@ $info    = $params->get('info_block_position', 0);
 			<?php echo $this->item->introtext;?>
 		</div>
 	</div>
+    <div class="downline">
+        <a class="btn" href="<?php echo ($params->get('access-view')) ? JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language)):"";?>">
+            <?php echo JText::sprintf('COM_CONTENT_READ_MORE_TITLE');?>
+        </a>
+    </div>
 </div>

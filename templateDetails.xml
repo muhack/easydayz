@@ -89,7 +89,7 @@
 				<field name="civicnumber" type="text" default="" label="TPL_EASYDAYZ_ADDRESS_CIVICNUMBER_LABEL" description="TPL_EASYDAYZ_ADDRESS_CIVICNUMBER_DESCRIPTION" filter="string" />
 				<field name="city" type="text" default="" label="TPL_EASYDAYZ_ADDRESS_CITY_LABEL" description="TPL_EASYDAYZ_ADDRESS_CITY_DESCRIPTION" filter="string" />
 				<field name="province" type="text" default="" label="TPL_EASYDAYZ_ADDRESS_PROVINCE_LABEL" description="TPL_EASYDAYZ_ADDRESS_PROVINCE_DESCRIPTION" filter="string" />
-				<field name="region" type="text" default="" label="TPL_EASYDAYZ_ADDRESS_REGION_LABEL" description="TPL_EASYDAYZ_ADDRESS_REGION_DESCRIPTION" filter="string" />
+				<field name="state" type="text" default="" label="TPL_EASYDAYZ_ADDRESS_REGION_LABEL" description="TPL_EASYDAYZ_ADDRESS_REGION_DESCRIPTION" filter="string" />
                 <field name="nation" type="text" default="" label="TPL_EASYDAYZ_ADDRESS_NATION_LABEL" description="TPL_EASYDAYZ_ADDRESS_NATION_DESCRIPTION" filter="string" />
 			</fieldset>
 			<fieldset name="officialcontact">

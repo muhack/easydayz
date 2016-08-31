@@ -17,6 +17,13 @@ $color : #007707;
 	}
   }
 }
+form {
+  &.form-horizontal {
+	& .control-label {
+	  text-align: left;
+	}
+  }
+}
 /*single unit*/
 .cover{
   &{
@@ -114,6 +121,67 @@ ul{
 	}
   }
 }
+/*Menu User*/
+nav.menu-user{
+  &.login{
+	&{
+	  
+	}
+	& > ul > li > a{
+	  &{
+		background: $color;
+		color:white;
+	  }
+	  &.dropdown-toggle{
+		background: white;
+		color: $color;
+	  }
+	}
+	& .controls{
+	  &{
+		padding:10px;
+	  }
+	  & input[type=text], & input[type=password], & input[type=button].submit, button.submit{
+		background-color: none;
+		border: none;
+		color: black;
+		border-bottom: 1px solid #007707;
+		width: 100%;
+		padding: 10px;
+	  }
+	  & input[type=button].submit, & button.submit{
+		&{
+		  background-color:white;
+		  color:$color;
+		  transition-property: background-color,color;
+		  transition-duration: 500ms;
+		  transition-timing-function: ease-in-out;
+		}
+		&:hover{
+		  background-color:$color;
+		  color:white;
+		}
+	  }
+	}
+  }
+  &.logout{
+	&{}
+	& button, & input[type=button]{
+	  &.submit{
+		padding: 15px;
+		line-height: 20px;
+		border:none;
+		background: $color;
+		color: white;
+	  }
+	}
+	& .menu-list{
+	  border: none;
+	  background: white;
+	  color: $color;
+	}
+  }
+}
 /*SideBar*/
 .sidebar{
   &{
@@ -124,9 +192,10 @@ ul{
   }
 }
 /*Calendar Module*/
-.calendar{
+.calendar-events-list{
   &{
 	padding:20px 0px;
+	border:none;
   }
   & .event{
 	&{
@@ -200,10 +269,51 @@ ul{
 	}
   }
 }
+/*Intro article*/
+.intro-article{
+  &{
+	padding:10px;
+  }
+  & .downline{
+	&{
+	  width:100%;
+	  text-align:right;
+	  border-bottom:1px solid $color;
+	}
+	& a{
+	  border-top-left-radius: 5px;
+	  border-top-right-radius: 5px;
+	  border-bottom-left-radius: 0px;
+	  border-bottom-right-radius: 0px;
+	  border:1px solid $color;
+	  background: $color;
+	  color:white;
+	}
+  }
+}
+/*links article*/
+.links-item{
+  &{
+	
+  }
+  & .intro-article{
+	& .cover{
+	  &{min-height: 0px;}
+	  & .headline{
+		position: relative;
+	  }
+	}
+  }
+  & .downline{
+	& .details{
+	  float:left;
+	}
+  }
+}
 /*Article*/
 main.article{
   &{
-	
+	padding:20px;
   }
   & .details{
 	& ul{
@@ -249,5 +359,25 @@ main.article{
 	  background:#EFEFEF;
 	  color:#393939;
 	}
+  }
+}
+
+/* footer */
+footer{
+  &{
+	background: black;
+	color:white;
+  }
+}
+/*bottombar*/
+.bottombar{
+  &{
+	background: $color;
+  	color:white;
+	padding:10px;
+  }
+  & p{
+	margin:0px;
+	padding:0px;
   }
 }
