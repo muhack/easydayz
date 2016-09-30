@@ -228,6 +228,32 @@ nav.menu-user{
 	}
   }
 }
+/*Logo*/
+.logo{
+  &{
+	background-repeat:no-repeat;
+	background-position: center;
+	-webkit-background-size:contain;
+	background-size:contain;
+	min-height:40px;
+  }
+  &.hidden-xs {
+	min-height: 200px;
+	width: 100%;
+  }
+	@media(min-width:545px){
+	  &.hidden-xs {		display: block;}
+	}
+  &.navbar-brand {
+	min-height: 100%;
+	width: 100%;
+  }
+  @media(max-width:544px){
+	&.navbar-brand{
+	  display: block;
+	}
+  }
+}
 /*Menu*/
 .navigator{
   &{

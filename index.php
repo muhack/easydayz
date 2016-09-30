@@ -67,7 +67,7 @@ endif;
         <div class="container navigator">
             <div class="row">
                 <div class="col-xs-12">
-                    <jdoc:include type="modules" name="position-2" />
+                    <jdoc:include type="modules" name="position-2" logo="<?php echo $params->get('logoFile');?>" logomobile="<?php echo $params->get('logoMobileFile');?>" />
                 </div>
             </div>
             <div class="row content equalheight">

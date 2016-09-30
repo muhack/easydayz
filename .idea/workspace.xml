@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="711eb38f-f16e-4e2f-b81e-47c41d5511d3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/mod_login/default.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/mod_login/default_logout.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/ad14ad0a23ea7b2403291c0c1a9f7469323f2c41/tmpl_desktop.scssc" afterPath="$PROJECT_DIR$/.sass-cache/ad14ad0a23ea7b2403291c0c1a9f7469323f2c41/tmpl_desktop.scssc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/tmpl_desktop.css" afterPath="$PROJECT_DIR$/css/tmpl_desktop.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/tmpl_desktop.css.map" afterPath="$PROJECT_DIR$/css/tmpl_desktop.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/com_content/category/blog_item.php" afterPath="$PROJECT_DIR$/html/com_content/category/blog_item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/com_content/featured/default.php" afterPath="$PROJECT_DIR$/html/com_content/featured/default.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/com_content/featured/default_item.php" afterPath="$PROJECT_DIR$/html/com_content/featured/default_item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/com_content/featured/default_links.php" afterPath="$PROJECT_DIR$/html/com_content/featured/default_links.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/mod_articles_category/calendar.php" afterPath="$PROJECT_DIR$/html/mod_articles_category/calendar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/modules.php" afterPath="$PROJECT_DIR$/html/modules.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/template.js" afterPath="$PROJECT_DIR$/js/template.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/en-GB/en-GB.tpl_easydayz.ini" afterPath="$PROJECT_DIR$/language/en-GB/en-GB.tpl_easydayz.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/language/en-GB/en-GB.tpl_easydayz.sys.ini" afterPath="$PROJECT_DIR$/language/en-GB/en-GB.tpl_easydayz.sys.ini" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/tmpl_desktop.scss" afterPath="$PROJECT_DIR$/scss/tmpl_desktop.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templateDetails.xml" afterPath="$PROJECT_DIR$/templateDetails.xml" />
     </list>
@@ -44,35 +35,32 @@
     <splitter split-orientation="horizontal" split-proportion="0.47553325">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="tmpl_desktop.scss" pinned="false" current-in-tab="false">
+          <file leaf-file-name="tmpl_desktop.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/scss/tmpl_desktop.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="301">
-                  <caret line="194" column="21" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
+                <state relative-caret-position="345">
+                  <caret line="267" column="20" selection-start-line="267" selection-start-column="20" selection-end-line="267" selection-end-column="20" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="calendar.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/html/mod_articles_category/calendar.php">
+          <file leaf-file-name="templateDetails.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/templateDetails.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="585">
-                  <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+                <state relative-caret-position="705">
+                  <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="default_logout.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/html/mod_login/default_logout.php">
+          <file leaf-file-name="modules.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/html/modules.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-                  <folding>
-                    <element signature="e#6#238#0#PHP" expanded="true" />
-                    <element signature="e#1652#1756#0#PHP" expanded="true" />
-                  </folding>
+                <state relative-caret-position="780">
+                  <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -80,33 +68,11 @@
           <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="557">
-                  <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+                <state relative-caret-position="945">
+                  <caret line="69" column="160" selection-start-line="69" selection-start-column="160" selection-end-line="69" selection-end-column="160" />
                   <folding>
                     <element signature="e#6#248#0#PHP" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="blog.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/html/com_content/category/blog.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-                  <folding>
-                    <element signature="e#6#240#0#PHP" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="temp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/html/com_content/article/temp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3330">
-                  <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -118,7 +84,7 @@
           <file leaf-file-name="default.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/html/mod_login/default.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
+                <state relative-caret-position="15">
                   <caret line="74" column="102" selection-start-line="74" selection-start-column="102" selection-end-line="74" selection-end-column="102" />
                   <folding>
                     <element signature="e#6#238#0#PHP" expanded="true" />
@@ -170,7 +136,6 @@
         <option value="$PROJECT_DIR$/html/mod_menu/nav_component.php" />
         <option value="$PROJECT_DIR$/html/mod_menu/nav_heading.php" />
         <option value="$PROJECT_DIR$/html/mod_menu/nav.php" />
-        <option value="$PROJECT_DIR$/html/modules.php" />
         <option value="$PROJECT_DIR$/html/com_content/category/default.php" />
         <option value="$PROJECT_DIR$/html/com_content/article/temp" />
         <option value="$PROJECT_DIR$/html/com_content/category/default_item.php" />
@@ -180,14 +145,15 @@
         <option value="$PROJECT_DIR$/html/com_content/featured/default_links.php" />
         <option value="$PROJECT_DIR$/js/template.js" />
         <option value="$PROJECT_DIR$/html/com_content/featured/default.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/templateDetails.xml" />
         <option value="$PROJECT_DIR$/language/en-GB/en-GB.tpl_easydayz.sys.ini" />
         <option value="$PROJECT_DIR$/language/en-GB/en-GB.tpl_easydayz.ini" />
         <option value="$PROJECT_DIR$/html/mod_login/default_logout.php" />
         <option value="$PROJECT_DIR$/html/mod_login/default.php" />
-        <option value="$PROJECT_DIR$/scss/tmpl_desktop.scss" />
         <option value="$PROJECT_DIR$/html/mod_articles_category/calendar.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/html/modules.php" />
+        <option value="$PROJECT_DIR$/templateDetails.xml" />
+        <option value="$PROJECT_DIR$/scss/tmpl_desktop.scss" />
       </list>
     </option>
   </component>
@@ -209,9 +175,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-1080" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -238,6 +203,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -313,7 +280,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="html" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -328,6 +295,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mod_menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -383,8 +354,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1092,14 +1061,16 @@
       <workItem from="1472301770113" duration="13338000" />
       <workItem from="1472340205684" duration="21248000" />
       <workItem from="1472501730622" duration="17596000" />
+      <workItem from="1472658985041" duration="3367000" />
+      <workItem from="1473064873580" duration="221000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52431000" />
+    <option name="totallyTimeSpent" value="56019000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1080" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1110,10 +1081,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13626835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13494319" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1512247" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15024233" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1181,6 +1152,56 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+          <folding>
+            <element signature="e#6#248#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/com_content/category/blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/com_content/article/temp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3330">
+          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/mod_login/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#238#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/en-GB/en-GB.tpl_easydayz.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/en-GB/en-GB.tpl_easydayz.sys.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/com_content/article/default.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1211,7 +1232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,7 +1239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1227,7 +1246,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1272,7 +1290,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1297,14 +1314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="20" column="64" selection-start-line="20" selection-start-column="64" selection-end-line="20" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/mod_menu/nav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1319,9 +1328,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
           <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="45" />
-          <folding>
-            <element signature="e#6#240#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1337,7 +1343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1345,7 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1368,7 +1372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1376,17 +1379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3330">
           <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/com_content/category/blog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-          <folding>
-            <element signature="e#6#240#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1410,15 +1402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/modules.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="58" column="61" selection-start-line="58" selection-start-column="61" selection-end-line="58" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1426,7 +1409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1438,19 +1420,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templateDetails.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="83" column="21" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html/com_content/featured/default.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1459,16 +1432,6 @@
         <state relative-caret-position="90">
           <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
-          <folding>
-            <element signature="e#6#248#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1490,18 +1453,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/mod_login/default_logout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="210">
           <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
           <folding>
-            <element signature="e#6#238#0#PHP" expanded="true" />
-            <element signature="e#1652#1756#0#PHP" expanded="true" />
+            <element signature="e#6#238#0#PHP" expanded="false" />
+            <element signature="e#1652#1756#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/mod_login/default.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
+        <state relative-caret-position="15">
           <caret line="74" column="102" selection-start-line="74" selection-start-column="102" selection-end-line="74" selection-end-column="102" />
           <folding>
             <element signature="e#6#238#0#PHP" expanded="true" />
@@ -1509,18 +1472,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/tmpl_desktop.scss">
+    <entry file="file://$PROJECT_DIR$/html/mod_menu/nav.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="194" column="21" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
+        <state relative-caret-position="165">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/mod_articles_category/calendar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        <state relative-caret-position="360">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/com_content/category/blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/modules.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templateDetails.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="69" column="160" selection-start-line="69" selection-start-column="160" selection-end-line="69" selection-end-column="160" />
+          <folding>
+            <element signature="e#6#248#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/tmpl_desktop.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="267" column="20" selection-start-line="267" selection-start-column="20" selection-end-line="267" selection-end-column="20" />
           <folding />
         </state>
       </provider>

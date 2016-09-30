@@ -56,6 +56,7 @@ function modChrome_well($module, &$params, &$attribs)
 }
 function modChrome_navmenu($module, &$params, &$attribs){
 	?>
+	<a class="logo hidden-xs" href="<?php echo $attribs["baseurl"];?>" style="background-image:url('<?php echo $attribs["logo"];?>')"></a>
 	<nav class="navbar navbar-default navigator" id="MainMenu">
 		<div class="container-fluid">
 			<div class="navbar-header hidden-sm hidden-md hidden-lg">
@@ -65,8 +66,7 @@ function modChrome_navmenu($module, &$params, &$attribs){
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php echo JUri::Base(true);?>">
-					<?php echo $module->title;?>
+				<a class="logo navbar-brand" href="<?php echo JUri::Base(true);?>" style="background-image:url('<?php echo $attribs["logomobile"];?>')">
 				</a>
 			</div>
 			<div class="collapse navbar-collapse">

@@ -45,7 +45,7 @@
 				<field name="logoFile" class="" type="media" default=""
 					label="TPL_EASYDAYZ_LOGO_LABEL"
 					description="TPL_EASYDAYZ_LOGO_DESC" />
-						<field name="backgroundFile" class="" type="media" default=""
+						<field name="logoMobileFile" class="" type="media" default=""
 							label="TPL_EASYDAYZ_LOGO_LABEL"
 							description="TPL_EASYDAYZ_LOGO_DESC" />
 
