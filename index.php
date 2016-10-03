@@ -67,10 +67,16 @@ endif;
         <div class="container navigator">
             <div class="row">
                 <div class="col-xs-12">
-                    <jdoc:include type="modules" name="position-2" logo="<?php echo $params->get('logoFile');?>" logomobile="<?php echo $params->get('logoMobileFile');?>" />
+                    <jdoc:include type="modules" name="position-2" style="logos" logo="<?php echo $params->get('logoFile');?>" logomobile="<?php echo $params->get('logoMobileFile');?>" />
                 </div>
             </div>
             <div class="row content equalheight">
+              <?php if($params->get('allwidth')):?>
+                <div class="col-xs-12">
+                    <jdoc:include type="message" />
+                    <jdoc:include type="component" />
+                </div>
+              <?php else:?>
                 <div class="col-xs-12 col-sm-8">
                     <jdoc:include type="message" />
                     <jdoc:include type="component" />
@@ -79,12 +85,13 @@ endif;
                 <div class="col-xs-12 col-sm-4 sidebar">
                     <jdoc:include type="modules" name="position-4" />
                 </div>
+              <?php endif;?>
             </div>
         </div>
         <jdoc:include type="modules" name="position-5" />
         <footer>
             <div class="container">
-                <?php if($this->countModules('position-6') || $this->countModules('position-7')):?>
+                <?php if($this->countModules('position-6') && $this->countModules('position-7')):?>
                 <div class="row">
                     <div class="col-xs-12 col-sm-3">
                         <jdoc:include type="modules" name="position-6" />
